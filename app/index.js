@@ -18,10 +18,20 @@ util.inherits(AngularComponentGenerator, yeoman.generators.Base);
 
 AngularComponentGenerator.prototype.app = function app() {
   this.mkdir('app');
-  this.mkdir('app/templates');
+  this.mkdir('app/scripts');
+  this.copy('scripts/directive.coffee', 'app/scripts/directive.coffee');
+};
 
+AngularComponentGenerator.prototype.test = function test() {
+  this.mkdir('test');
+  this.mkdir('test/spec');
+  this.copy('test/directive.coffee', 'test/spec/directive.coffee');
+};
+
+AngularComponentGenerator.prototype.packageFiles = function packageFiles() {
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
+  this.copy('_Gruntfile.js', 'Gruntfile.js');
 };
 
 AngularComponentGenerator.prototype.projectfiles = function projectfiles() {
