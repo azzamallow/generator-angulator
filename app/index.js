@@ -16,26 +16,6 @@ var AngularComponentGenerator = module.exports = function AngularComponentGenera
 
 util.inherits(AngularComponentGenerator, yeoman.generators.Base);
 
-AngularComponentGenerator.prototype.askFor = function askFor() {
-  var cb = this.async();
-
-  // have Yeoman greet the user.
-  console.log(this.yeoman);
-
-  var prompts = [{
-    type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
-    default: true
-  }];
-
-  this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
-
-    cb();
-  }.bind(this));
-};
-
 AngularComponentGenerator.prototype.app = function app() {
   this.mkdir('app');
   this.mkdir('app/templates');
