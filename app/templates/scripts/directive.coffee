@@ -1,5 +1,7 @@
 'use strict'
 
+angular.module '<%= name %>', []
+
 angular.module('<%= name %>')
   .directive '<%= name %>', ->
     template: '<div></div>'
