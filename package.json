@@ -27,6 +27,7 @@
     "mocha": "~1.14.0"
   },
   "peerDependencies": {
+    "generator-karma": "~0.6.0",
     "yo": ">=1.0.0"
   },
   "engines": {
