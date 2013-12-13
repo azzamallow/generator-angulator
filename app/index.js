@@ -64,7 +64,8 @@ AngularComponentGenerator.prototype.test = function test() {
 };
 
 AngularComponentGenerator.prototype.component = function component() {
-  generateSourceAndTest.call(this, this.env.options.type, this.env.options.name);
+  appTemplate.call(this, this.env.options.type, this.env.options.name);
+  testTemplate.call(this, this.env.options.type, this.env.options.name);
 };
 
 AngularComponentGenerator.prototype.packageFiles = function packageFiles() {
@@ -77,12 +78,6 @@ AngularComponentGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
   this.copy('test/jshintrc', 'test/.jshintrc');
-};
-
-var generateSourceAndTest = function (type, name) {
-  appTemplate.call(this, type, name);
-  testTemplate.call(this, type, name);
-  // this.addScriptToIndex(name);
 };
 
 var appTemplate = function (type, name) {
@@ -104,10 +99,3 @@ var testTemplate = function (type, name) {
 
   yeoman.generators.Base.prototype.template.apply(this, [src, dest, options]);
 };
-
-// AngularComponentGenerator.prototype.htmlTemplate = function (src, dest) {
-//   yeoman.generators.Base.prototype.template.apply(this, [
-//     src,
-//     path.join(this.env.options.appPath, dest)
-//   ]);
-// };
