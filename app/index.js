@@ -64,10 +64,7 @@ AngularComponentGenerator.prototype.test = function test() {
 };
 
 AngularComponentGenerator.prototype.component = function component() {
-  if (this.env.options.type === 'directive') {
-    this.copy('scripts/directive.coffee', 'app/scripts/' + this.env.options.name + '.coffee');
-    this.copy('test/directive.coffee',    'test/spec/' + this.env.options.name + '.coffee');
-  }
+  generateSourceAndTest.call(this, this.env.options.type, this.env.options.name);
 };
 
 AngularComponentGenerator.prototype.packageFiles = function packageFiles() {
@@ -81,3 +78,36 @@ AngularComponentGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('jshintrc', '.jshintrc');
   this.copy('test/jshintrc', 'test/.jshintrc');
 };
+
+var generateSourceAndTest = function (type, name) {
+  appTemplate.call(this, type, name);
+  testTemplate.call(this, type, name);
+  // this.addScriptToIndex(name);
+};
+
+var appTemplate = function (type, name) {
+  var src     = 'scripts/' + type + '.coffee';
+  var dest    = 'app/scripts/' + name + '.coffee';
+  var options = {
+    name: name
+  };
+
+  yeoman.generators.Base.prototype.template.apply(this, [src, dest, options]);
+};
+
+var testTemplate = function (type, name) {
+  var src     = 'test/' + type + '.coffee';
+  var dest    = 'test/spec/' + name + '.coffee';
+  var options = {
+    name: name
+  };
+
+  yeoman.generators.Base.prototype.template.apply(this, [src, dest, options]);
+};
+
+// AngularComponentGenerator.prototype.htmlTemplate = function (src, dest) {
+//   yeoman.generators.Base.prototype.template.apply(this, [
+//     src,
+//     path.join(this.env.options.appPath, dest)
+//   ]);
+// };
