@@ -156,14 +156,10 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           dot: true,
-          cwd: '<%%= yeoman.app %>',
+          cwd: '.tmp/scripts',
           dest: '<%%= yeoman.dist %>',
           src: [
-            '*.{ico,png,txt}',
-            '.htaccess',
-            'bower_components/**/*',
-            'images/{,*/}*.{webp}',
-            'fonts/*'
+            '*.js'
           ]
         }]
       }
@@ -195,18 +191,16 @@ module.exports = function (grunt) {
     //     }
     //   }
     // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%%= yeoman.dist %>/scripts/scripts.js': [
-    //         '<%%= yeoman.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
+    uglify: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'src/js',
+          src: '**/*.js',
+          dest: 'dest/js'
+        }]
+      }
+    },
 
     // Test settings
     karma: {
@@ -246,7 +240,6 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'concurrent:dist',
-    'concat',
     'ngmin',
     'copy:dist',
     'uglify',
