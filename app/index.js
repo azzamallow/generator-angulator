@@ -6,6 +6,8 @@ var spawn = require('child_process').spawn;
 
 var AngularComponentGenerator = module.exports = function AngularComponentGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
+  this.appname = this.appname || path.basename(process.cwd());
+  this.appname = this._.camelize(this._.slugify(this._.humanize(this.appname)));
 
   this.on('end', function () {
     this.installDependencies({ skipInstall: options['skip-install'] });
@@ -38,7 +40,8 @@ AngularComponentGenerator.prototype.askForType = function askForType() {
   this.prompt([{
     type: 'input',
     name: 'name',
-    message: 'What is the name of your component?'
+    message: 'What is the name of your component?',
+    default: this.appname
   },{
     type: 'list',
     name: 'type',
