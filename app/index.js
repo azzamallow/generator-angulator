@@ -72,6 +72,7 @@ AngularComponentGenerator.prototype.packageFiles = function packageFiles() {
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
   this.copy('bowerrc', '.bowerrc');
+  this.copy('gitignore', '.gitignore');
   this.copy('Gruntfile.js', 'Gruntfile.js');
 };
 
