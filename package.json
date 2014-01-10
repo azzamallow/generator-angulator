@@ -1,6 +1,6 @@
 {
   "name": "generator-angulator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A Yeoman Generator for creating testable AngularJS components, such as a directive or a service",
   "keywords": [
     "yeoman-generator"
