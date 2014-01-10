@@ -1,4 +1,4 @@
-# generator-angular-component [![Build Status](https://secure.travis-ci.org/azzamallow/generator-angular-component.png?branch=master)](https://travis-ci.org/azzamallow/generator-angular-component)
+# generator-angulator [![Build Status](https://secure.travis-ci.org/azzamallow/generator-angulator.png?branch=master)](https://travis-ci.org/azzamallow/generator-angulator)
 
 A generator for [Yeoman](http://yeoman.io).
 
@@ -23,16 +23,16 @@ $ npm install -g yo
 
 Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-angular-component from npm, run:
+To install generator-angulator from npm, run:
 
 ```
-$ npm install -g generator-angular-component
+$ npm install -g generator-angulator
 ```
 
 Finally, initiate the generator:
 
 ```
-$ yo angular-component
+$ yo angulator
 ```
 
 ### Getting To Know Yeoman

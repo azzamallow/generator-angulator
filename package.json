@@ -1,12 +1,12 @@
 {
-  "name": "generator-angular-component",
+  "name": "generator-angulator",
   "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "description": "A Yeoman Generator for creating testable AngularJS components, such as a directive or a service",
   "keywords": [
     "yeoman-generator"
   ],
-  "homepage": "https://github.com/azzamallow/generator-angular-component",
-  "bugs": "https://github.com/azzamallow/generator-angular-component/issues",
+  "homepage": "https://github.com/azzamallow/generator-angulator",
+  "bugs": "https://github.com/azzamallow/generator-angulator/issues",
   "author": {
     "name": "azzamallow",
     "email": "",
@@ -15,7 +15,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/azzamallow/generator-angular-component.git"
+    "url": "git://github.com/azzamallow/generator-angulator.git"
   },
   "scripts": {
     "test": "mocha"
