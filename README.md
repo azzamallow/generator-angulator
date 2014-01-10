@@ -22,12 +22,18 @@ To install generator-angulator from npm, run:
 $ npm install -g generator-angulator
 ```
 
-### Let's make a component!
-
-Create a directory and cd into it
+If you would like to publish your component to bower, you will need to install bower from npm:
 
 ```
-$ mkdir myDirective && cd $_
+$ npm install -g bower
+```
+
+### Let's make a component!
+
+Create a directory and cd into it:
+
+```
+$ mkdir <component_name> && cd $_
 ```
 
 Initiate the generator:
@@ -38,10 +44,16 @@ $ yo angulator
 
 You will be asked some questions, answer and let the generator do the rest! 
 
-Once your project has been generated, you can build and test your component with easy
+Once your project has been generated, you can build and test your component with easy:
 
 ```
 $ grunt test
+```
+
+All done? You can publish your component to bower and share it with the world:
+
+```
+$ bower register <component_name> https://github.com/<author>/<component_name>
 ```
 
 ## License
