@@ -1,4 +1,4 @@
-# generator-angulator [![Build Status](https://secure.travis-ci.org/azzamallow/generator-angulator.png?branch=master)](https://travis-ci.org/azzamallow/generator-angulator)
+# generator-angulator
 
 A [Yeoman](http://yeoman.io) Generator for creating a testable AngularJS component, such as a directive or a service, and publishing it to bower.
 
