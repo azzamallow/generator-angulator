@@ -6,7 +6,7 @@ describe 'Directive: <%= name %>', ->
 
   scope = {}
 
-  beforeEach inject ($controller, $rootScope) ->
+  beforeEach inject ($rootScope) ->
     scope = $rootScope.$new()
 
   it 'should make hidden element visible', inject ($compile) ->
