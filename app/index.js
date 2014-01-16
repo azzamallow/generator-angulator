@@ -46,7 +46,7 @@ AngularComponentGenerator.prototype.askForType = function askForType() {
     type: 'list',
     name: 'type',
     message: 'What type of component would you like to create?',
-    choices: ['directive', 'filter'],
+    choices: ['directive', 'factory', 'filter', 'service'],
     default: 'directive'
   }], function (props) {
     this.env.options.name = props.name;
