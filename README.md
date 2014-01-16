@@ -49,7 +49,13 @@ Once your project has been generated, you can build and test your component with
 $ grunt test
 ```
 
-Publish your component to bower and share it with the world:
+Build your component and prepare it to be registered with bower:
+
+```
+grunt build
+```
+
+Register your component to bower and share it with the world:
 
 ```
 $ bower register <component_name> https://github.com/<author>/<component_name>
