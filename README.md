@@ -52,7 +52,7 @@ $ grunt test
 Build your component and prepare it to be registered with bower:
 
 ```
-grunt build
+$ grunt build
 ```
 
 Register your component to bower and share it with the world:
