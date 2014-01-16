@@ -52,6 +52,8 @@ AngularComponentGenerator.prototype.askForType = function askForType() {
     this.env.options.name = props.name;
     this.env.options.type = props.type;
 
+    this.name = this.env.options.name;
+
     cb();
   }.bind(this));
 };
