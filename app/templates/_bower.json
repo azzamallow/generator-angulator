@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "dist/<%= name %>.js",
   "ignore": [
-    "**/.*"
+    "**/.*",
     "app", 
     "test"
   ],
