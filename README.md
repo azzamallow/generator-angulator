@@ -43,6 +43,8 @@ You will be asked to name the generator and select the type of component you wou
   service
 ```
 
+### Develop and maintain your component
+
 Once your project has been generated, you can build and test your component with ease:
 
 ```
@@ -54,6 +56,8 @@ Build your component and prepare it to be registered with bower:
 ```
 $ grunt build
 ```
+
+### Register with bower
 
 Register your component to bower and share it with the world:
 
